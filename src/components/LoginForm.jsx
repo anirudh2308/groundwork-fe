@@ -22,7 +22,7 @@ export default function LoginForm({ onLogin, notice }) {
   return (
     <div className="center">
       <form className="card login" onSubmit={handleSubmit}>
-        <h1>Groundwork</h1>
+        <h1 className="brand">groundwork<span className="tm">™</span></h1>
         <p className="muted">Sign in to view construction leads.</p>
 
         <label>

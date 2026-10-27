@@ -157,6 +157,18 @@ button.primary:hover:not(:disabled) {
   letter-spacing: -0.01em;
 }
 
+h1.brand {
+  font-size: 1.5rem;
+}
+
+.tm {
+  font-size: 0.55em;
+  font-weight: 500;
+  vertical-align: super;
+  margin-left: 1px;
+  color: var(--muted);
+}
+
 .header-right {
   display: flex;
   align-items: center;
@@ -271,11 +283,123 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
+/* Sorting */
+
+.table-note {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+button.link {
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+button.link:hover:not(:disabled) {
+  background: none;
+  color: var(--accent-hover);
+}
+
+th button.sort {
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+th button.sort:hover:not(:disabled) {
+  background: none;
+  color: var(--text);
+}
+
+th button.sort.active {
+  color: var(--text);
+}
+
+.sort-icon {
+  font-size: 0.85em;
+  opacity: 0.45;
+}
+
+.sort.active .sort-icon {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* Pagination */
+
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
+  justify-content: space-between;
+  gap: 12px 20px;
+}
+
+.pages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.page-btn {
+  min-width: 36px;
+  padding: 0 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.page-btn.current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  opacity: 1;
+  cursor: default;
+}
+
+.ellipsis {
+  padding: 0 2px;
+  color: var(--muted);
+}
+
+.range {
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.page-tools,
+form.inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+form.inline {
+  gap: 6px;
+}
+
+label.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+input.jump {
+  width: 72px;
 }
 
 @media (max-width: 600px) {
